@@ -23,9 +23,9 @@ st.write('Neighborhood :', vecindario)
 st.subheader('Incidents')
 st.dataframe(df)
 # INCIDENTES POR AÑO
-import plotly.express as px
+import plotly.figure_factory as ff
 st.subheader('Incidents per year')
-fig1 = px.histogram(df, x='Incident Year', nbins=3,text_auto=True)
+fig1 = ff.histogram(df, x='Incident Year', nbins=3,text_auto=True)
 fig1=fig1.update_layout(bargap=0.2)
 st.plotly_chart(fig1 , use_container_width=True)
 #GRAFICAS POR AÑO
@@ -36,8 +36,8 @@ st.metric('Total incidents', incidentes)
 #Pie
 st.subheader('Resolution')
 pie=df.groupby('Resolution')['Incident Number'].count()
-piet1= px.pie(pie, values='Incident Number', names=pie.index,
-color_discrete_sequence=px.colors.sequential.RdBu)
+piet1= ff.pie(pie, values='Incident Number', names=pie.index,
+color_discrete_sequence=ff.colors.sequential.RdBu)
 st.plotly_chart(piet1 , use_container_width=True)
 #Mapa
 st.subheader('Incidents Map')
@@ -49,10 +49,10 @@ st.map(mp1)
 st.subheader('Incidents Category')
 dft1=df[['Incident Category','Incident Subcategory']]
 dft1=dft1.dropna()
-figt1 = px.histogram(dft1, x='Incident Category', color='Incident Subcategory')
+figt1 = fx.histogram(dft1, x='Incident Category', color='Incident Subcategory')
 st.plotly_chart(figt1 , use_container_width=True)
 st.subheader('Incidents per Day')
-hist1 = px.histogram(df, x='Incident Day of Week',color='Incident Year',
+hist1 = fx.histogram(df, x='Incident Day of Week',color='Incident Year',
 nbins=3,text_auto=True)
 hist1=hist1.update_layout(bargap=0.2)
 st.plotly_chart(hist1 , use_container_width=True)
@@ -64,8 +64,8 @@ st.metric('Total incidents in 2018', incidentes)
 #Pie
 st.subheader('Resolution')
 pie=year_t2.groupby('Resolution')['Incident Number'].count()
-piet2= px.pie(pie, values='Incident Number', names=pie.index,
-color_discrete_sequence=px.colors.sequential.RdBu)
+piet2= fx.pie(pie, values='Incident Number', names=pie.index,
+color_discrete_sequence=fx.colors.sequential.RdBu)
 st.plotly_chart(piet2 , use_container_width=True)
 #Mapa
 st.subheader('Incidents Map')
@@ -77,10 +77,10 @@ st.map(mp2)
 st.subheader('Incidents Category')
 t2=year_t2[['Incident Category','Incident Subcategory']]
 t2=t2.dropna()
-figt2 = px.histogram(t2, x='Incident Category', color='Incident Subcategory')
+figt2 = fx.histogram(t2, x='Incident Category', color='Incident Subcategory')
 st.plotly_chart(figt2 , use_container_width=True)
 st.subheader('Incidents per Day')
-hist2 = px.histogram(year_t2, x='Incident Day of Week',color='Incident Year',
+hist2 = fx.histogram(year_t2, x='Incident Day of Week',color='Incident Year',
 nbins=3,text_auto=True)
 hist2=hist2.update_layout(bargap=0.2)
 st.plotly_chart(hist2 , use_container_width=True)
@@ -92,8 +92,8 @@ st.metric('Total incidents in 2019', incidentes)
 #Pie
 st.subheader('Resolution')
 pie=year_t3.groupby('Resolution')['Incident Number'].count()
-piet3= px.pie(pie, values='Incident Number', names=pie.index,
-color_discrete_sequence=px.colors.sequential.RdBu)
+piet3= fx.pie(pie, values='Incident Number', names=pie.index,
+color_discrete_sequence=fx.colors.sequential.RdBu)
 st.plotly_chart(piet3 , use_container_width=True)
 #Mapa
 st.subheader('Incidents Map')
@@ -105,10 +105,10 @@ st.map(mp3)
 st.subheader('Incidents Category')
 t3=year_t3[['Incident Category','Incident Subcategory']]
 t3=t3.dropna()
-figt3 = px.histogram(t3, x='Incident Category', color='Incident Subcategory')
+figt3 = fx.histogram(t3, x='Incident Category', color='Incident Subcategory')
 st.plotly_chart(figt3 , use_container_width=True)
 st.subheader('Incidents per Day')
-hist3 = px.histogram(year_t3, x='Incident Day of Week',color='Incident Year',
+hist3 = fx.histogram(year_t3, x='Incident Day of Week',color='Incident Year',
 nbins=3,text_auto=True)
 hist3=hist3.update_layout(bargap=0.2)
 st.plotly_chart(hist3 , use_container_width=True)
@@ -118,8 +118,8 @@ incidentes=len(year_t4.axes[0])
 st.metric('Total incidents in 2020', incidentes)
 st.subheader('Resolution')
 pie=year_t4.groupby('Resolution')['Incident Number'].count()
-piet4= px.pie(pie, values='Incident Number', names=pie.index,
-color_discrete_sequence=px.colors.sequential.RdBu)
+piet4= fx.pie(pie, values='Incident Number', names=pie.index,
+color_discrete_sequence=fx.colors.sequential.RdBu)
 st.plotly_chart(piet4 , use_container_width=True)
 st.subheader('Incidents Map')
 mp4 = year_t4[['Latitude','Longitude']]
@@ -129,10 +129,10 @@ st.map(mp4)
 st.subheader('Incidents Category')
 t4=year_t4[['Incident Category','Incident Subcategory']]
 t4=t4.dropna()
-figt4 = px.histogram(t4, x='Incident Category', color='Incident Subcategory')
+figt4 = fx.histogram(t4, x='Incident Category', color='Incident Subcategory')
 st.plotly_chart(figt4 , use_container_width=True)
 st.subheader('Incidents per Day')
-hist4 = px.histogram(year_t4, x='Incident Day of Week',color='Incident Year',
+hist4 = fx.histogram(year_t4, x='Incident Day of Week',color='Incident Year',
 nbins=3,text_auto=True)
 hist4=hist4.update_layout(bargap=0.2)
 st.plotly_chart(hist4 , use_container_width=True)
