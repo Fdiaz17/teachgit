@@ -3,8 +3,8 @@ import pandas as pd
 import numpy as np
 import datetime
 from datetime import date, time, datetime, timedelta
-import plotly.express as px
-import plotly.graph_objects as go
+#import plotly.express as px
+#import plotly.graph_objects as go
 
 #Extracción de Datos. 
 #El csv utilizado se encuentra en la sección de Anexos. 
