@@ -4,8 +4,8 @@ import streamlit as st
 #import numpy as np
 #from plotly.subplots import make_subplots
 #import plotly.graph_objects as go
-import seaborn as sns
-import matplotlib.pyplot as plt
+#import seaborn as sns
+#import matplotlib.pyplot as plt
 st.set_page_config(layout="wide")
 st.title("Crimes in San Francisco")
 st.markdown("Know the crimes in each area.")
