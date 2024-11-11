@@ -3,9 +3,9 @@ import pandas as pd
 import numpy as np
 #Importar el Dataframe
 df=pd.read_csv("Policev1.csv")
-df = df[['Incident Number','Incident Datetime','Incident Category','Incident
-Subcategory','Incident Description','Resolution','Police District','Analysis
-Neighborhood','Latitude','Longitude', 'Incident Day of Week','Incident Year']]
+df = df[['Incident Number','Incident Datetime','Incident Category','Incident Subcategory','Incident Description',
+         'Resolution','Police District','Analysis Neighborhood','Latitude','Longitude', 'Incident Day of Week',
+         'Incident Year']]
 #Opciones para el usuario
 #Distrito
 distritos=df['Police District'].unique() # Todos los distritos
