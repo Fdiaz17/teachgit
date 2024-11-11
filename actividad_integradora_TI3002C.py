@@ -62,5 +62,3 @@ if genre == 'Yes':
     st.write("Thank You!")
 else:
     st.write("Bye.")
-
-
