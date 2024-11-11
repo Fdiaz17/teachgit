@@ -57,8 +57,7 @@ nbins=3,text_auto=True)
 hist1=hist1.update_layout(bargap=0.2)
 st.plotly_chart(hist1 , use_container_width=True)
 with tab2:
-#Selección de datos
-year_t2=df[df['Incident Year']==2018]
+         year_t2=df[df['Incident Year']==2018]
 #Incidentes
 incidentes=len(year_t2.axes[0])
 st.metric('Total incidents in 2018', incidentes)
@@ -86,8 +85,7 @@ nbins=3,text_auto=True)
 hist2=hist2.update_layout(bargap=0.2)
 st.plotly_chart(hist2 , use_container_width=True)
 with tab3:
-#Selección de datos
-year_t3=df[df['Incident Year']==2019]
+         year_t3=df[df['Incident Year']==2019]
 #Incidentes
 incidentes=len(year_t3.axes[0])
 st.metric('Total incidents in 2019', incidentes)
@@ -115,7 +113,7 @@ nbins=3,text_auto=True)
 hist3=hist3.update_layout(bargap=0.2)
 st.plotly_chart(hist3 , use_container_width=True)
 with tab4:
-year_t4=df[df['Incident Year']==2020]
+         year_t4=df[df['Incident Year']==2020]
 incidentes=len(year_t4.axes[0])
 st.metric('Total incidents in 2020', incidentes)
 st.subheader('Resolution')
