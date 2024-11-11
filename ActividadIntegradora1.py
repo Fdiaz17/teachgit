@@ -31,8 +31,7 @@ st.plotly_chart(fig1 , use_container_width=True)
 #GRAFICAS POR AÑO
 tab1,tab2,tab3,tab4= st.tabs(['All years', '2018','2019','2020'])
 with tab1:
-#Incidentes
-incidentes=len(df.axes[0])
+         incidentes=len(df.axes[0])
 st.metric('Total incidents', incidentes)
 #Pie
 st.subheader('Resolution')
